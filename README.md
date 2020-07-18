@@ -12,5 +12,5 @@ This theme used the [gruvbox](https://github.com/morhetz/gruvbox) pallete of col
 
 In order to change settings you need to open your joplin advanced theme settings.
 
-Userchrome.css (Modifies entire app view, except markdown)
-Userstyle.css (Modifies just the markdown previewer)
+- Userchrome.css (Modifies entire app view, except markdown)
+- Userstyle.css (Modifies just the markdown previewer)
