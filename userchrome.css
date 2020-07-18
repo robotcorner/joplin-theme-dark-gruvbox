@@ -1,0 +1,388 @@
+/* html-ized markdown for entire app */
+/* designed originally by uxamanda (https://discourse.joplinapp.org/u/uxamanda). latest version https://github.com/amandamcg/joplin-theme */
+/* Redesigned by Stephen (robotcorner) https://https://github.com/robotcorner/joplin-theme-dark-gruvbox */
+
+:root {
+    --white: #fbf1c7;
+    --dark-white: #ebdbb2;
+    --light-grey: #928374;
+    --grey: #504945;
+    --dark-grey: #3c3836;
+    --darker-grey: #32302f;
+    --black: #181a1b;
+    --red: #fb4934;
+    --red-dark: #cc241d;
+    --green: #b8bb26;
+    --green-dark: #6ebb26;
+    --yellow:#fabd2f;
+    --yellow-dark: #d79921;
+    --yellow-darkest: #c47f00;
+    --blue: #83a598;
+    --blue-dark: #458588;
+    --purple: #d3869b;
+    --purple-dark: #b16286;
+    --aqua: #8ec07c;
+    --aqua-dark: #689d6a;
+    --aqua-very-dark: #477248;
+    --orange: #fe8019;
+    --orange-dark: #d65d0e;
+
+    --base-size-1: 1px;
+    --base-size-4: 5px;
+    --base-size-8: 9px;
+    --base-size-10: 11px;
+    --base-size-14: 14px;
+    --base-size-16: 16px;
+    --base-size-18: 18px;
+    --base-size-24: 24px;
+    --base-size-32: 32px;
+    --base-size-40: 40px;
+    --base-size-272: 272px;
+    --z-toc: 99;
+    --font-weight-light: 200;
+    --font-weight-base: 400;
+    --font-weight-bold: 500;
+    --font-sans: "Bahnschrift"; /*Bahnschrift */
+    --font-mono: "Cascadia Code";
+    --primary: var(--purple);
+    --secondary: var(--orange-dark);
+    --font-line-height: 1.4em;
+    --font-size: var(--base-size-16);
+    --icon-size: var(--font-size);
+}
+
+* {
+    font-family: var(--font-sans) !important;
+    font-weight: var(--font-weight-base) !important;
+    font-size: var(--font-size) !important;
+    line-height: var(--font-line-height) !important;
+}
+
+.fa, .far, .fas {
+    font-weight: 900 !important;
+    font-family: "Font Awesome 5 Free" !important;
+    font-size: var(--icon-size) !important;
+}
+
+body {
+    background-color: var(--black) !important;
+    font-size: var(--base-size-16) !important;
+}
+
+.noteTextViewer {
+    border-left: var(--base-size-1) solid var(--dark-grey) !important;
+}
+
+#react-root>div>div>div:last-child {
+    border-left: none !important;
+    background-color: var(--black)
+}
+
+#react-root>div>div>div:last-child>div>div {
+    border-bottom: var(--base-size-1) solid var(--dark-grey) !important;
+}
+
+#react-root>div>div>div:last-child>div>div>span {
+    padding: 0 18px 4px 4px !important;
+}
+
+#react-root>div>div>div:last-child>div>div>div .editor-toolbar {
+    border-bottom: var(--base-size-1) solid var(--dark-grey) !important;
+    margin-bottom: 0 !important;
+    border-top: none !important;
+}
+
+#react-root>div>div>div:last-child>div>div .editor-toolbar {
+    border-bottom: none !important;
+}
+
+#react-root>div>div>div:last-child>div>div>div>div:last-child>div:last-child {
+    border: none !important;
+}
+
+/* markdown */
+.ace_text-layer {
+    padding: 3%;
+}
+
+.ace_content {
+    background-color: var(--black) !important;
+}
+
+.ace_editor div, .ace_editor span {
+    font-family: var(--font-mono) !important;
+    font-weight: --font-weight-base;
+    color: var(--dark-white);
+}
+
+.ace_heading {
+    /*color: var(--white) !important;*/
+    color: var(--yellow) !important;
+}
+
+/*Bold*/
+.ace_string.ace_strong {
+    color: var(--green-dark) !important;
+    font-weight: bold !important;
+}
+
+/* Italics */
+.ace_string.ace_emphasis {
+	color: var(--green-dark) !important;
+	font-style: italic !important;
+}
+
+/* Line Breaks */
+.ace_constant.ace_language.ace_escape {
+	color: gold !important;
+}
+
+.ace_variable {
+    color: var(--white) !important;
+}
+
+/* Lists and Checkboxes */
+.ace_list {
+    /*color: var(--light-grey) !important;*/
+    color: palegoldenrod !important;
+}
+
+/* Inline Codes and Codeblocks */
+.ace_support.ace_function {
+	color: var(--aqua) !important;
+}
+
+.ace_string {
+    color: var(--primary) !important;
+    
+}
+
+.ace_cursor {
+    border-left: var(--base-size-1) solid var(--orange) !important;
+}
+
+/* prevent cursor from blinking */
+/* https://discourse.joplinapp.org/t/share-your-css/1730/17 */
+.ace_cursor-layer:not(.ace_hidden-cursors) .ace_cursor {
+    opacity: 1 !important;
+}
+
+/* gui */
+.side-bar {
+    background-color: var(--black) !important;
+    opacity: 0.8;
+}
+
+.side-bar .folders {}
+
+.side-bar .folders .list-item, .side-bar div, .side-bar span {
+    color: var(--dark-white) !important;
+    font-weight: var(--font-weight-base) !important;
+    font-size: var(--font-size) !important;
+    margin-bottom: var(--base-size-1);
+}
+
+.side-bar div div {
+    font-size: var(--font-size) !important;
+}
+
+/* making icons the same width so text aligns */
+.side-bar .fas:first-of-type {
+    width: var(--base-size-18)
+}
+
+.list-item div {
+    margin-left: auto !important;
+    padding-right: var(--base-size-14) !important;
+    opacity: 0.3 !important;
+}
+
+.synchronize-button {}
+
+.note-list {
+    background-color: var(--black);
+    padding: var(--base-size-8) 0;
+    opacity: 0.7;
+}
+
+.note-list input[type="checkbox"i] {
+    opacity: 0.5 !important;
+}
+
+.note-list div {
+    border-bottom: 0 !important;
+}
+
+.note-list input[type="checkbox"i] {
+    margin-right: 1em !important;
+}
+
+.note-list a.list-item span, .tags .list-item {
+    /* font-family: "IBM Plex Mono" !important; */
+    /* font-size: 12px !important; */
+    color: var(--dark-white) !important;
+}
+
+.tag-list {
+    order: 4;
+}
+
+/* icons */
+.fa, .far, .fas {
+    color: var(--light-grey) !important;
+    padding-right: var(--base-size-4);
+    padding-left: var(--base-size-4)
+}
+
+#react-root>div {
+    background-color: var(--dark-grey) !important;
+}
+
+#react-root div div div:last-child div input {
+    margin: 0 !important;
+    margin-right: var(--base-size-18) !important;
+    margin-bottom: 4px !important;
+    height: 34px !important;
+    min-height: 34px !important;
+    font-size: var(--font-size) !important;
+    font-family: var(--font-mono);
+    font-weight: var(--font-weight-light);
+    background-color: var(--black) !important
+}
+
+
+.editor-toolbar .button {
+    height: var(--base-size-40)
+}
+
+.editor-toolbar .button:not(.disabled):hover, .header .button:not(.disabled):hover{
+    color: var(--white) !important;
+    background-color: var(--yellow-darkest) !important;
+    border: 1px solid var(--yellow-darkest) !important;
+}
+
+.editor-toolbar .button, .header .button {
+    border: 0 !important;
+}
+
+.editor-toolbar .button i {
+    font-size: var(--icon-size) !important;
+}
+
+.editor-toolbar .fa, .editor-toolbar .fas {
+    padding-right: 4;
+}
+
+.header {
+    border-bottom: var(--base-size-1) solid var(--dark-grey) !important;
+}
+
+.header .title {
+    color: var(--darker-white);
+}
+
+input {
+    border-radius: var(--base-size-4) !important;
+    border: 0px !important;
+    background-color: var(--dark-grey) !important;
+    border: var(--base-size-1) solid var(--grey) !important;
+    opacity: 0.7;
+    /*outline: none;*/
+}
+
+input:focus {
+    outline: none;
+    border: var(--base-size-1) solid var(--orange-dark) !important;
+}
+
+.header .title {
+    display: none !important;
+}
+
+.folders i.fa.fa-minus-square, .folders i.fa.fa-plus-square {
+    padding-right: 3px !important;
+}
+
+.folders .list-item-container {
+    margin: 0 !important;
+}
+
+.note-list .list-item-container:hover, .folders .list-item-container:hover {
+    /* background-color: var(--darker-white) !important; */
+    background-color: var(--yellow-darkest) !important;
+}
+
+.folders a.list-item {
+    padding-left: var(--base-size-8);
+    margin: 0 !important;
+}
+
+.side-bar>div:last-child div {
+    font-family: var(--font-mono) !important;
+    font-size: calc(var(--font-size)/1.3) !important;
+    padding: 2px;
+}
+
+.side-bar>div:last-child {
+    padding: var(--base-size-4) !important;
+    font-family: var(--font-mono) !important;
+    border-top: var(--base-size-1) solid var(--black);
+}
+
+.synchronize-button {
+    border: none !important;
+    background: var(--dark-grey);
+    border-radius: var(--base-size-4) !important;
+    padding: var(--base-size-14) !important;
+    color: var(--light-grey) !important;
+    text-transform: uppercase;
+    font-family: var(--font-mono) !important;
+    font-weight: var(--font-weight-bold) !important;
+    letter-spacing: 1px;
+}
+
+
+/* ==CodeMirror editor modifications - these will not work with the default ACE editor== */
+span[role="presentation"] {
+    color: black;
+   /* changes the font colour for the editor text */
+}
+.cm-variable-2, .cm-meta {
+    color: var(--red-dark) !important;
+   /* changes the font colour for all lists (.cm-meta controls the checkbox square brackets [ ] ) */
+}
+.cm-comment {
+    color: var(--green-dark) !important;
+   /* changes the font colour for code text*/
+}
+.cm-quote {
+    color: var(--purple-dark) !important;
+   /* changes the font colour for quoted text*/
+}
+.cm-image-marker {
+    color: var(--red);
+   /* changes the font colour for the "!" before displayed image links */
+    font-weight: 900;
+   /* changes the font weight for the "!" before displayed image links */
+}
+.cm-link, .cm-url {
+/* .cm-link is everything in the square brackets | .cm-url is the url itself in the round brackets */
+    color: var(--green) !important;
+   /* changes the font colour for links */
+    text-decoration: none !important;
+   /* removes underlining for links */
+}
+.cm-tag, .cm-attribute {
+/* HTML - .cm-tag is the HTML tag itself such as "<img>" | .cm-attribute is any HTML tag attributes such as "width" or "src" */
+/* the below are NOT applied if the html text is marked as "code" unless it is in a fenced html code block (```HTML) */
+    color: var(--dark-purple) !important;
+   /* changes the font colour for HTML tags */
+    font-weight: 500;
+   /* changes the font weight for HTML tags */
+}
+.cm-hr {
+    color: var(--orange-dark) !important;
+   /* changes the font colour for horizontal rule markdown "***" */
+    font-weight: 900;
+   /* changes the font weight for horizontal rule markdown "***" */
+}
