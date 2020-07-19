@@ -4,7 +4,7 @@
 
 Inspired by "Mayukai Mirage Gruvbox Darktooth Theme" on VSCode.
 
-This theme used the [gruvbox](https://github.com/morhetz/gruvbox) pallete of colors mainly. I heavily modified the colors from https://github.com/amandamcg/joplin-theme and added a view touches like better quote blocks.
+This theme used the [gruvbox](https://github.com/morhetz/gruvbox) pallete of colors mainly. I heavily modified the colors from https://github.com/amandamcg/joplin-theme and added a view touches like better quote blocks. It also uses the base dark theme of Joplin, so make sure to select that too.
 
 ![](https://github.com/robotcorner/joplin-theme-dark-gruvbox/blob/master/screenshots/sample-img1.png)
 
