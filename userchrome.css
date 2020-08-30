@@ -42,7 +42,7 @@
     --font-weight-light: 200;
     --font-weight-base: 400;
     --font-weight-bold: 500;
-    --font-sans: "Bahnschrift"; /*Bahnschrift */
+    --font-sans: "Work Sans";
     --font-mono: "Cascadia Code";
     --primary: var(--purple);
     --secondary: var(--orange-dark);
@@ -341,12 +341,35 @@ input:focus {
     letter-spacing: 1px;
 }
 
+/* TESTING BELOW */
+/* code mirror */
 
-/* ==CodeMirror editor modifications - these will not work with the default ACE editor== */
-span[role="presentation"] {
-    color: black;
-   /* changes the font colour for the editor text */
+.cm {
+    font-family: var(--font-sans);
+    font-size: var(--font-size);
 }
+
+/* background and base color */
+.cm-s-material-darker.CodeMirror {
+    background-color: var(--black) !important;
+    color: var(--light-grey) !important
+}
+
+/* lists */
+.cm-s-material-darker .cm-variable-2 {
+    color: var(--light-grey) !important
+}
+
+/* internal links */
+.cm-s-material-darker .cm-string {
+    color: var(--primary) !important
+}
+
+/* headers */
+.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4 {
+    color: var(--dark-white) !important
+}
+
 .cm-variable-2, .cm-meta {
     color: var(--red-dark) !important;
    /* changes the font colour for all lists (.cm-meta controls the checkbox square brackets [ ] ) */

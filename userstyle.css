@@ -13,7 +13,7 @@
     --red: #fb4934;
     --red-dark: #cc241d;
     --green: #b8bb26;
-    --green-dark: #989791;
+    --green-dark: #6ebb26;;
     --yellow:#fabd2f;
     --yellow-dark: #d79921;
     --blue: #83a598;
@@ -44,8 +44,8 @@
     --font-weight-base: 400;
     --font-weight-base-extra: 500;
     --font-weight-bold: 600;
-    --font-title: "Rubik";
-    --font-sans: "Corbel"; /*Montserrat or Corbel*/
+    --font-title: "Work Sans";
+    --font-sans: "Work Sans";
     --font-mono: "Cascadia Code";
     --primary: var(--yellow);
     --secondary: var(--yellow);
@@ -218,6 +218,12 @@ mark {
     background-color: var(--yellow-dark);
 }
 
+/*Bold*/
+strong {
+    color: var(--green-dark) !important;
+    font-weight: var(--font-weight-bold);
+}
+
 nav.table-of-contents>ul {
     top: 0;
     right: 0;
@@ -301,7 +307,6 @@ b-orange {
     background-color: #faf3d3; 
 }
 
-
 b-purple {
     border-color: #af74e8;
     background-color: #ead9fb; 
@@ -312,3 +317,72 @@ b-pink {
     background-color: #fad3e5; 
 }
 /**/
+
+/* TESTING BELOW */
+/* code mirror */
+
+.cm {
+    font-family: var(--font-sans);
+    font-size: var(--font-size);
+}
+
+/* background and base color */
+.cm-s-material-darker.CodeMirror {
+    background-color: var(--black) !important;
+    color: var(--light-grey) !important
+}
+
+/* lists */
+.cm-s-material-darker .cm-variable-2 {
+    color: var(--light-grey) !important
+}
+
+/* internal links */
+.cm-s-material-darker .cm-string {
+    color: var(--primary) !important
+}
+
+/* headers */
+.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4 {
+    color: var(--dark-white) !important
+}
+
+.cm-variable-2, .cm-meta {
+    color: var(--red-dark) !important;
+   /* changes the font colour for all lists (.cm-meta controls the checkbox square brackets [ ] ) */
+}
+.cm-comment {
+    color: var(--green-dark) !important;
+   /* changes the font colour for code text*/
+}
+.cm-quote {
+    color: var(--purple-dark) !important;
+   /* changes the font colour for quoted text*/
+}
+.cm-image-marker {
+    color: var(--red);
+   /* changes the font colour for the "!" before displayed image links */
+    font-weight: 900;
+   /* changes the font weight for the "!" before displayed image links */
+}
+.cm-link, .cm-url {
+/* .cm-link is everything in the square brackets | .cm-url is the url itself in the round brackets */
+    color: var(--green) !important;
+   /* changes the font colour for links */
+    text-decoration: none !important;
+   /* removes underlining for links */
+}
+.cm-tag, .cm-attribute {
+/* HTML - .cm-tag is the HTML tag itself such as "<img>" | .cm-attribute is any HTML tag attributes such as "width" or "src" */
+/* the below are NOT applied if the html text is marked as "code" unless it is in a fenced html code block (```HTML) */
+    color: var(--dark-purple) !important;
+   /* changes the font colour for HTML tags */
+    font-weight: 500;
+   /* changes the font weight for HTML tags */
+}
+.cm-hr {
+    color: var(--orange-dark) !important;
+   /* changes the font colour for horizontal rule markdown "***" */
+    font-weight: 900;
+   /* changes the font weight for horizontal rule markdown "***" */
+}
