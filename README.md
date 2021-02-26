@@ -1,5 +1,8 @@
 # JOPLIN THEME - DARK GRUVBOX
 
+## NOTICE: ACCEPTING PULL REQUEST TO UPDATE THEME - If you made it better please update this repo! :)
+
+
 ### About
 
 Inspired by "Mayukai Mirage Gruvbox Darktooth Theme" on VSCode.
